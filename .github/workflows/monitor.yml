@@ -2,7 +2,7 @@ name: Page Monitor
 
 on:
   schedule:
-    - cron: "*/30 * * * *"   # 每 30 分鐘一次(GitHub 可能延遲幾分鐘)
+    - cron: "17,47 * * * *"  # 每小時的第 17、47 分各跑一次(避開整點/半點的尖峰,比較不會被延遲)
   workflow_dispatch:          # 允許手動按「Run workflow」測試
 
 permissions:
